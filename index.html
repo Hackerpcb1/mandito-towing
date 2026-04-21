@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MANDITO TOWING – Servicio de Grúa 24/7 Puerto Rico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">🚛</div>
+      <div><span>MANDITO</span> TOWING</div>
+    </a>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#solicitar">Solicitar</a>
+      <a href="#buscar">Buscar Vehículo</a>
+      <a href="#rastrear">Rastrear</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" onclick="toggleAdmin()">Panel Admin</a>
+    </div>
+    <div class="nav-phone">
+      <div>
+        <div class="nav-phone-num">📞 787-218-2648</div>
+        <div class="nav-avail"><span class="pulse" style="display:inline-block;width:7px;height:7px;background:var(--success);border-radius:50%;margin-right:5px;vertical-align:middle"></span>Disponible 24/7 · Toda la isla</div>
+      </div>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:7872182648" class="btn btn-primary btn-sm">📞 Llamar</a>
+      <a href="https://wa.me/17872182648" class="btn btn-outline btn-sm">💬 WhatsApp</a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+  <a href="#solicitar" onclick="toggleMenu()">Solicitar Grúa</a>
+  <a href="#buscar" onclick="toggleMenu()">Buscar Vehículo</a>
+  <a href="#rastrear" onclick="toggleMenu()">Rastrear Servicio</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  <a href="tel:7872182648" class="btn btn-primary" style="justify-content:center">📞 Llamar Ahora: 787-218-2648</a>
+  <a href="https://wa.me/17872182648" class="btn btn-green" style="justify-content:center">💬 WhatsApp</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0b 0%,#111114 40%,#16141a 100%)"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(245,195,0,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,195,0,0.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent)"></div>
+  <div style="position:absolute;top:-100px;right:-100px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,195,0,0.07) 0%,transparent 70%);pointer-events:none"></div>
+  <div style="position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:120px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center">
+    <div class="fade-in">
+      <div class="badge badge-red" style="margin-bottom:20px"><span class="pulse" style="display:inline-block;width:8px;height:8px;background:#ff6b6b;border-radius:50%"></span>EMERGENCIAS 24/7 · TODA LA ISLA</div>
+      <h1 style="font-size:clamp(48px,7vw,84px);font-weight:900;line-height:0.95;text-transform:uppercase;margin-bottom:24px">
+        SERVICIO DE<br>
+        <span style="color:var(--yellow)">GRÚA 24/7</span><br>
+        <span style="-webkit-text-stroke:2px rgba(255,255,255,0.4);color:transparent">PUERTO RICO</span>
+      </h1>
+      <p style="font-size:18px;color:var(--gray);line-height:1.7;margin-bottom:36px;max-width:480px">Asistencia rápida, segura y confiable para tu vehículo en toda la isla. Respondemos en minutos, no en horas.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px">
+        <a href="#solicitar" class="btn btn-primary" style="font-size:18px;padding:16px 32px">🚛 Solicitar Grúa</a>
+        <a href="tel:7872182648" class="btn btn-red">📞 Llamar Ahora</a>
+        <a href="https://maps.google.com" class="btn btn-outline">📍 Enviar Ubicación</a>
+      </div>
+      <div style="display:flex;gap:36px;flex-wrap:wrap">
+        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--yellow);line-height:1">24/7</div><div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Disponibilidad</div></div>
+        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--yellow);line-height:1">15min</div><div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Resp. Promedio</div></div>
+        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--yellow);line-height:1">100%</div><div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Isla Cubierta</div></div>
+        <div><div style="font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--yellow);line-height:1">2K+</div><div style="font-size:12px;color:var(--gray);text-transform:uppercase;letter-spacing:0.1em;margin-top:2px">Servicios</div></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px" class="fade-in">
+      <div class="status-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="width:10px;height:10px;background:var(--success);border-radius:50%;display:inline-block;box-shadow:0 0 0 3px rgba(34,197,94,0.2)"></span>
+            <span style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray)">ESTADO DEL SERVICIO</span>
+          </div>
+          <span class="tag tag-green">ACTIVO</span>
+        </div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:4px">Sistema Operacional</div>
+        <div style="font-size:13px;color:var(--gray)">Todas las unidades disponibles</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:20px">
+          <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border)">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--white)" id="activeUnits">8</div>
+            <div style="font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em">Unidades</div>
+          </div>
+          <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border)">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--yellow)" id="pendingReqs">3</div>
+            <div style="font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em">En Proceso</div>
+          </div>
+          <div style="text-align:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:10px;border:1px solid var(--border)">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;color:var(--success)" id="todayDone">14</div>
+            <div style="font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:0.06em">Hoy Hoy</div>
+          </div>
+        </div>
+        <div style="height:4px;background:var(--border);border-radius:2px;margin-top:20px;overflow:hidden">
+          <div style="height:100%;background:linear-gradient(90deg,var(--yellow),var(--red));border-radius:2px;animation:fillAnim 3s ease-in-out infinite"></div>
+        </div>
+      </div>
+      <div class="status-card" style="background:linear-gradient(135deg,rgba(245,195,0,0.08),rgba(230,48,48,0.05))">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-bottom:10px">CONTACTO DIRECTO</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:36px;font-weight:900;color:var(--yellow);margin-bottom:16px">📞 787-218-2648</div>
+        <div style="display:flex;gap:10px">
+          <a href="tel:7872182648" class="btn btn-red" style="flex:1;justify-content:center;font-size:15px;padding:12px">Llamar</a>
+          <a href="https://wa.me/17872182648" class="btn btn-green" style="flex:1;justify-content:center;font-size:15px;padding:12px">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK BAR -->
+<div class="quick-bar">
+  <div class="container quick-bar-inner">
+    <div>
+      <div class="quick-num">📞 787-218-2648</div>
+      <div class="quick-text">Disponible 24/7 en toda la isla de Puerto Rico</div>
+    </div>
+    <div class="quick-actions">
+      <a href="tel:7872182648" class="btn-dark">📞 Llamar Ahora</a>
+      <a href="https://wa.me/17872182648" class="btn-dark" style="background:#25d366;color:#fff">💬 WhatsApp</a>
+      <a href="#solicitar" class="btn-dark">🚛 Solicitar Grúa</a>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD STATS -->
+<section id="dashboard" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">📊 Dashboard en Tiempo Real</div>
+      <h2 class="section-title">ESTADÍSTICAS<br><span style="color:var(--yellow)">OPERACIONALES</span></h2>
+      <p class="section-sub">Monitoreo en tiempo real de todos los servicios activos en la isla.</p>
+    </div>
+    <div class="dash-grid fade-in" style="margin-top:48px">
+      <div class="dash-card">
+        <div class="dash-card-accent" style="background:var(--yellow)"></div>
+        <div style="padding-left:16px">
+          <div class="dash-icon">🚛</div>
+          <div class="dash-num" style="color:var(--yellow)">2,847</div>
+          <div class="dash-label">Total Servicios</div>
+          <div class="dash-change up">↑ +12% este mes</div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-accent" style="background:var(--success)"></div>
+        <div style="padding-left:16px">
+          <div class="dash-icon">✅</div>
+          <div class="dash-num" style="color:var(--success)">2,691</div>
+          <div class="dash-label">Completados</div>
+          <div class="dash-change up">↑ 94.5% tasa éxito</div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-accent" style="background:var(--warning)"></div>
+        <div style="padding-left:16px">
+          <div class="dash-icon">⚡</div>
+          <div class="dash-num" style="color:var(--warning)">15min</div>
+          <div class="dash-label">Tiempo Respuesta</div>
+          <div class="dash-change warn">⚡ Promedio actual</div>
+        </div>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-accent" style="background:var(--red)"></div>
+        <div style="padding-left:16px">
+          <div class="dash-icon">🚨</div>
+          <div class="dash-num" style="color:#ff6b6b">24/7</div>
+          <div class="dash-label">Emergencias</div>
+          <div class="dash-change info">365 días al año</div>
+        </div>
+      </div>
+    </div>
+    <div class="table-section fade-in">
+      <div class="table-header">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase">SOLICITUDES RECIENTES</h3>
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="🔍 Buscar por tablilla o nombre..." id="tableSearch" oninput="filterTable()">
+          <select class="filter-select" id="statusFilter" onchange="filterTable()">
+            <option value="">Todos los estados</option>
+            <option value="En camino">En camino</option>
+            <option value="Completado">Completado</option>
+            <option value="Pendiente">Pendiente</option>
+            <option value="Asignado">Asignado</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="requestTable">
+          <thead>
+            <tr>
+              <th>#Caso</th><th>Cliente</th><th>Vehículo</th><th>Tablilla</th><th>Problema</th><th>Ubicación</th><th>Estado</th><th>Unidad</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicios" class="section" style="background:var(--black)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">🔧 Lo que hacemos</div>
+      <h2 class="section-title">NUESTROS<br><span style="color:var(--yellow)">SERVICIOS</span></h2>
+      <p class="section-sub">Cobertura completa para cualquier emergencia vehicular en toda la isla.</p>
+    </div>
+    <div class="services-grid fade-in">
+      <div class="service-card">
+        <div class="service-icon">🚛</div>
+        <div class="service-title">Servicio de Grúa 24/7</div>
+        <p class="service-desc">Remolque de emergencia disponible las 24 horas, los 7 días de la semana en toda la isla.</p>
+        <div class="service-tag"><span class="tag tag-yellow">24/7</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔗</div>
+        <div class="service-title">Remolque de Vehículos</div>
+        <p class="service-desc">Transportamos tu vehículo de forma segura a cualquier destino dentro de Puerto Rico.</p>
+        <div class="service-tag"><span class="tag tag-green">Disponible</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛣️</div>
+        <div class="service-title">Asistencia en Carretera</div>
+        <p class="service-desc">Te asistimos en cualquier punto de la isla. Autopistas, carreteras y zonas remotas.</p>
+        <div class="service-tag"><span class="tag tag-yellow">Toda la isla</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔋</div>
+        <div class="service-title">Encendido de Batería</div>
+        <p class="service-desc">Servicio de jumpstart para vehículos con batería descargada. Rápido y efectivo.</p>
+        <div class="service-tag"><span class="tag tag-green">Rápido</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <div class="service-title">Cambio de Goma</div>
+        <p class="service-desc">Cambio de neumático pinchado en el lugar donde te encuentres. Sin esperas largas.</p>
+        <div class="service-tag"><span class="tag tag-green">Express</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⛽</div>
+        <div class="service-title">Entrega de Gasolina</div>
+        <p class="service-desc">Te llevamos combustible donde estés para que puedas continuar tu camino.</p>
+        <div class="service-tag"><span class="tag tag-blue">Express</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔑</div>
+        <div class="service-title">Apertura de Vehículos</div>
+        <p class="service-desc">¿Llaves dentro del carro? Te ayudamos a abrir tu vehículo sin daños.</p>
+        <div class="service-tag"><span class="tag tag-yellow">Sin daños</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚗</div>
+        <div class="service-title">Transporte de Autos</div>
+        <p class="service-desc">Transporte especializado para autos, SUVs, guaguas y motoras de forma segura.</p>
+        <div class="service-tag"><span class="tag tag-green">Todos tipos</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🆘</div>
+        <div class="service-title">Rescate de Vehículos</div>
+        <p class="service-desc">Rescate en terrenos difíciles, accidentes y situaciones de emergencia extrema.</p>
+        <div class="service-tag"><span class="tag tag-red">Emergencia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST FORM -->
+<section id="solicitar" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0" class="fade-in">
+      <div class="badge badge-red" style="margin-bottom:16px">🚨 Solicitar Servicio</div>
+      <h2 class="section-title">SOLICITA TU<br><span style="color:var(--yellow)">GRÚA AHORA</span></h2>
+      <p class="section-sub" style="margin:12px auto 0;text-align:center">Completa el formulario y te contactamos en minutos.</p>
+    </div>
+    <div class="form-card fade-in" style="margin-top:40px">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:8px">
+        <div>
+          <h3 class="form-title">FORMULARIO DE SERVICIO</h3>
+          <p style="color:var(--gray);font-size:14px">Todos los campos marcados son requeridos. Tiempo de respuesta: 5-15 min.</p>
+        </div>
+        <div style="display:flex;gap:10px">
+          <a href="tel:7872182648" class="btn btn-red" style="font-size:15px">📞 Llamar Directo</a>
+          <a href="https://wa.me/17872182648" class="btn btn-green" style="font-size:15px">💬 WhatsApp</a>
+        </div>
+      </div>
+      <form id="serviceForm" onsubmit="submitForm(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Nombre Completo *</label>
+            <input type="text" class="form-input" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Teléfono *</label>
+            <input type="tel" class="form-input" placeholder="787-000-0000" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ubicación Actual *</label>
+            <input type="text" class="form-input" placeholder="Dirección o descripción del lugar" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Destino del Vehículo</label>
+            <input type="text" class="form-input" placeholder="¿Dónde lo llevamos?">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Marca del Vehículo *</label>
+            <input type="text" class="form-input" placeholder="Toyota, Honda, Ford..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Modelo *</label>
+            <input type="text" class="form-input" placeholder="Corolla, Civic, F-150..." required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Año</label>
+            <input type="number" class="form-input" placeholder="2020" min="1990" max="2025">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tablilla</label>
+            <input type="text" class="form-input" placeholder="ABC-123">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tipo de Vehículo *</label>
+            <select class="form-select" required>
+              <option value="">Seleccionar...</option>
+              <option>Carro Sedán</option>
+              <option>SUV / Jeep</option>
+              <option>Guagua / Van</option>
+              <option>Pickup / Truck</option>
+              <option>Motora</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tipo de Problema *</label>
+            <select class="form-select" required>
+              <option value="">¿Qué pasó?</option>
+              <option>Vehículo averiado</option>
+              <option>Choque / Accidente</option>
+              <option>Goma pinchada</option>
+              <option>Batería muerta</option>
+              <option>Falta de gasolina</option>
+              <option>Llaves dentro del carro</option>
+              <option>Auto no enciende</option>
+              <option>Transporte de vehículo</option>
+              <option>Remolque de emergencia</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Comentarios Adicionales</label>
+            <textarea class="form-textarea" placeholder="Describe el problema con más detalle, referencias del lugar, etc."></textarea>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-lg">🚛 ENVIAR SOLICITUD DE GRÚA</button>
+          <p style="font-size:13px;color:var(--gray);margin-top:12px">Al enviar acepta ser contactado por MANDITO TOWING</p>
+        </div>
+      </form>
+      <div class="success-msg" id="successMsg">
+        ✅ ¡Solicitud enviada exitosamente! Un representante de MANDITO TOWING te contactará en menos de 5 minutos al número proporcionado. Número de caso: <strong id="caseNum"></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VEHICLE SEARCH -->
+<section id="buscar" class="section" style="background:var(--black)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">🔍 Buscar Vehículo</div>
+      <h2 class="section-title">BUSCAR<br><span style="color:var(--yellow)">VEHÍCULO</span></h2>
+      <p class="section-sub">Consulta el estado y ubicación de tu vehículo en nuestro sistema.</p>
+    </div>
+    <div class="search-section fade-in">
+      <div class="search-box-big">
+        <input type="text" class="search-input-big" placeholder="🔍 Tablilla (ej: ABC-123)" id="vSearch1">
+        <input type="text" class="search-input-big" placeholder="🚗 Marca o modelo" id="vSearch2">
+        <input type="text" class="search-input-big" placeholder="👤 Nombre del dueño" id="vSearch3">
+        <input type="text" class="search-input-big" placeholder="📋 Número de caso" id="vSearch4">
+        <button class="btn btn-primary" onclick="searchVehicle()" style="white-space:nowrap">🔍 Buscar</button>
+      </div>
+      <div id="vehicleResults" style="display:flex;flex-direction:column;gap:14px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING -->
+<section id="rastrear" class="section">
+  <div class="container">
+    <div style="text-align:center" class="fade-in">
+      <div class="badge" style="margin-bottom:16px">📡 Estado en Tiempo Real</div>
+      <h2 class="section-title">RASTREAR<br><span style="color:var(--yellow)">MI SERVICIO</span></h2>
+      <p class="section-sub" style="margin:12px auto 0;text-align:center">Ingresa tu número de caso o tablilla para ver el estado.</p>
+    </div>
+    <div class="track-box fade-in" style="margin-top:40px">
+      <div class="track-input-row">
+        <input type="text" class="track-input" placeholder="📋 Número de caso o tablilla (ej: MT-2024-001)" id="trackInput">
+        <button class="btn btn-primary" onclick="trackService()">RASTREAR</button>
+      </div>
+      <div id="trackResult" style="display:none">
+        <div class="eta-box">
+          <div>
+            <div class="eta-label">Tiempo Estimado de Llegada</div>
+            <div style="margin-top:4px;font-size:14px;color:var(--gray)">Unidad: Mandito-03 · Conductor: Carlos R.</div>
+          </div>
+          <div style="text-align:right">
+            <div class="eta-time" id="etaTime">12</div>
+            <div class="eta-unit">minutos</div>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="step done">
+            <div class="step-dot">✓</div>
+            <div class="step-content">
+              <div class="step-title">Solicitud Recibida</div>
+              <div class="step-time">Hoy, 2:34 PM</div>
+              <div class="step-desc">Tu solicitud fue recibida en el sistema exitosamente.</div>
+            </div>
+          </div>
+          <div class="step done">
+            <div class="step-dot">✓</div>
+            <div class="step-content">
+              <div class="step-title">Solicitud Confirmada</div>
+              <div class="step-time">Hoy, 2:35 PM</div>
+              <div class="step-desc">Un operador confirmó tu solicitud de servicio.</div>
+            </div>
+          </div>
+          <div class="step done">
+            <div class="step-dot">✓</div>
+            <div class="step-content">
+              <div class="step-title">Grúa Asignada</div>
+              <div class="step-time">Hoy, 2:37 PM</div>
+              <div class="step-desc">Unidad Mandito-03 asignada. Conductor: Carlos R.</div>
+            </div>
+          </div>
+          <div class="step active">
+            <div class="step-dot">▶</div>
+            <div class="step-content">
+              <div class="step-title">En Camino — 12 min</div>
+              <div class="step-time">Estimado: 2:52 PM</div>
+              <div class="step-desc">La grúa está en camino a tu ubicación.</div>
+            </div>
+          </div>
+          <div class="step pending">
+            <div class="step-dot">5</div>
+            <div class="step-content">
+              <div class="step-title">Servicio Completado</div>
+              <div class="step-time">Pendiente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="mapa" class="section" style="background:var(--black)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">🗺️ Cobertura</div>
+      <h2 class="section-title">CUBRIMOS TODA<br><span style="color:var(--yellow)">PUERTO RICO</span></h2>
+      <p class="section-sub">Desde Aguadilla hasta Humacao, de Arecibo a Ponce — estamos en toda la isla.</p>
+    </div>
+    <div class="map-container fade-in">
+      <div class="map-placeholder">
+        <div class="map-grid-bg"></div>
+        <div class="coverage-dots">
+          <div class="dot" style="top:40%;left:50%;animation-delay:0s"></div>
+          <div class="dot" style="top:30%;left:25%;animation-delay:0.5s"></div>
+          <div class="dot" style="top:55%;left:70%;animation-delay:1s"></div>
+          <div class="dot" style="top:25%;left:60%;animation-delay:1.5s"></div>
+          <div class="dot" style="top:60%;left:35%;animation-delay:0.3s"></div>
+          <div class="dot" style="top:45%;left:80%;animation-delay:0.8s"></div>
+          <div class="dot" style="top:35%;left:15%;animation-delay:1.2s"></div>
+          <div class="dot" style="top:70%;left:55%;animation-delay:0.6s"></div>
+          <div class="dot" style="top:20%;left:45%;animation-delay:1.8s"></div>
+          <div class="dot" style="top:50%;left:90%;animation-delay:0.4s"></div>
+        </div>
+        <div class="map-pr">
+          <span class="map-icon">🏝️</span>
+          <div class="map-text">ISLA DE PUERTO RICO</div>
+          <div class="map-sub">Cobertura total · 78 municipios</div>
+          <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;justify-content:center">
+            <span class="tag tag-green">San Juan</span>
+            <span class="tag tag-green">Bayamón</span>
+            <span class="tag tag-green">Ponce</span>
+            <span class="tag tag-green">Carolina</span>
+            <span class="tag tag-green">Mayagüez</span>
+            <span class="tag tag-green">Arecibo</span>
+            <span class="tag tag-yellow">+72 municipios más</span>
+          </div>
+        </div>
+      </div>
+      <div class="map-actions">
+        <a href="https://maps.google.com" class="btn btn-primary">📍 Compartir Mi Ubicación</a>
+        <a href="tel:7872182648" class="btn btn-red">📞 Llamar: 787-218-2648</a>
+        <a href="https://wa.me/17872182648" class="btn btn-green">💬 Enviar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="porque" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">⭐ ¿Por qué elegirnos?</div>
+      <h2 class="section-title">LA DIFERENCIA<br><span style="color:var(--yellow)">MANDITO</span></h2>
+    </div>
+    <div class="why-grid fade-in">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-icon">⚡</div>
+        <div class="why-title">Respuesta Inmediata</div>
+        <p class="why-desc">Tiempo promedio de llegada de 15 minutos. Porque en emergencias cada segundo cuenta.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-icon">🕐</div>
+        <div class="why-title">Disponible 24/7</div>
+        <p class="why-desc">365 días al año, a cualquier hora del día o la noche. Siempre disponibles cuando más nos necesitas.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-icon">🏝️</div>
+        <div class="why-title">Cobertura Completa</div>
+        <p class="why-desc">Operamos en todos los 78 municipios de Puerto Rico. No importa dónde estés, llegamos.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-icon">🛡️</div>
+        <div class="why-title">Servicio Seguro</div>
+        <p class="why-desc">Equipo profesional certificado y asegurado. Tu vehículo está en las mejores manos.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">05</div>
+        <div class="why-icon">👨‍🔧</div>
+        <div class="why-title">Trato Profesional</div>
+        <p class="why-desc">Conductores certificados y corteses. Transparencia en precios y servicio de calidad garantizado.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">06</div>
+        <div class="why-icon">📱</div>
+        <div class="why-title">Tecnología Moderna</div>
+        <p class="why-desc">Rastreo en tiempo real, confirmaciones digitales y comunicación directa vía WhatsApp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonios" class="section" style="background:var(--black)">
+  <div class="container">
+    <div style="text-align:center" class="fade-in">
+      <div class="badge" style="margin-bottom:16px">💬 Clientes Satisfechos</div>
+      <h2 class="section-title">LO QUE DICEN<br><span style="color:var(--yellow)">NUESTROS CLIENTES</span></h2>
+    </div>
+    <div class="testi-grid fade-in">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Se me pinchó una goma en la PR-52 a las 2 de la madrugada. Llamé a Mandito Towing y en menos de 20 minutos ya tenían un técnico conmigo. Servicio excepcional y el precio fue justo.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JR</div>
+          <div><div class="testi-name">Juan Rivera</div><div class="testi-loc">San Juan, PR</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Excelente servicio. Tuve un accidente en Caguas y estos muchachos llegaron rapidísimo. Profesionales, amables y muy eficientes. Definitivamente los recomiendo 100%.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MC</div>
+          <div><div class="testi-name">María Cruz</div><div class="testi-loc">Caguas, PR</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Me quedé sin batería en el estacionamiento del trabajo. Una llamada y en 15 minutos tenía el carro encendido. Muy buena atención al cliente y precio razonable. Los tengo guardados en mis contactos.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">CP</div>
+          <div><div class="testi-name">Carlos Pérez</div><div class="testi-loc">Bayamón, PR</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Necesitaba transportar mi carro desde Ponce hasta San Juan. Mandito Towing lo hizo de manera segura y al precio acordado. Llegó en perfectas condiciones. Muy recomendado.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">LG</div>
+          <div><div class="testi-name">Laura González</div><div class="testi-loc">Ponce, PR</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Se me olvidaron las llaves dentro del carro en Mayagüez. Pensé que iba a ser un proceso largo pero Mandito llegó en 18 minutos y abrió el carro sin ningún daño. Increíble servicio.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">RM</div>
+          <div><div class="testi-name">Roberto Martínez</div><div class="testi-loc">Mayagüez, PR</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Usé el WhatsApp para solicitar el servicio y fue muy fácil y rápido. Me dieron confirmación inmediata con el nombre del conductor. Muy moderna y eficiente la operación de esta empresa.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AT</div>
+          <div><div class="testi-name">Ana Torres</div><div class="testi-loc">Carolina, PR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="fade-in">
+      <div class="badge" style="margin-bottom:16px">📞 Contacto Directo</div>
+      <h2 class="section-title">ESTAMOS<br><span style="color:var(--yellow)">AQUÍ PARA TI</span></h2>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <p style="color:var(--gray);font-size:17px;line-height:1.7;margin-bottom:20px">Disponibles las 24 horas, los 7 días de la semana. Llama, escribe por WhatsApp o usa el formulario.</p>
+        <div class="contact-big-num">📞 787-218-2648</div>
+        <div class="contact-btns">
+          <a href="tel:7872182648" class="btn btn-red" style="justify-content:center;font-size:20px;padding:18px">📞 LLAMAR AHORA</a>
+          <a href="https://wa.me/17872182648" class="btn btn-green" style="justify-content:center;font-size:20px;padding:18px">💬 WHATSAPP</a>
+          <a href="#solicitar" class="btn btn-primary" style="justify-content:center;font-size:20px;padding:18px">🚛 SOLICITAR GRÚA</a>
+        </div>
+        <div style="margin-top:24px">
+          <div class="contact-item">
+            <div class="contact-item-icon">⏰</div>
+            <div class="contact-item-text">
+              <strong>Disponibilidad</strong>
+              <span>24 horas, 7 días a la semana, 365 días al año</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">🏝️</div>
+            <div class="contact-item-text">
+              <strong>Cobertura</strong>
+              <span>Toda la isla de Puerto Rico – 78 municipios</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">⚡</div>
+            <div class="contact-item-text">
+              <strong>Tiempo de Respuesta</strong>
+              <span>Promedio de 15 minutos en áreas metropolitanas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quick-form">
+        <h3 class="quick-form-title">Mensaje Rápido</h3>
+        <form onsubmit="submitQuickForm(event)">
+          <div class="qf-group"><input type="text" class="qf-input" placeholder="Tu nombre" required></div>
+          <div class="qf-group"><input type="tel" class="qf-input" placeholder="Tu teléfono" required></div>
+          <div class="qf-group"><input type="text" class="qf-input" placeholder="Tu ubicación actual"></div>
+          <div class="qf-group"><textarea class="qf-input" style="resize:vertical;min-height:100px" placeholder="¿En qué te podemos ayudar?" required></textarea></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:18px;padding:16px">ENVIAR MENSAJE ›</button>
+        </form>
+        <div id="quickFormSuccess" style="display:none;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:16px;margin-top:16px;color:#22c55e;font-weight:600;text-align:center">
+          ✅ Mensaje enviado. Te contactamos pronto!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADMIN PANEL -->
+<section id="admin" class="section" style="background:var(--dark)">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px">
+      <div>
+        <div class="badge" style="margin-bottom:12px">⚙️ Panel Administrativo</div>
+        <h2 class="section-title">PANEL<br><span style="color:var(--yellow)">ADMINISTRATIVO</span></h2>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="addNewService()">+ Nuevo Servicio</button>
+        <button class="btn btn-outline" onclick="exportData()">📥 Exportar</button>
+        <button class="btn btn-outline" onclick="toggleAdmin()" style="border-color:#ff6b6b;color:#ff6b6b">✕ Cerrar Panel</button>
+      </div>
+    </div>
+    <div class="admin-stats">
+      <div class="admin-stat">
+        <div class="admin-stat-num" style="color:var(--yellow)">47</div>
+        <div class="admin-stat-label">Total este mes</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num" style="color:var(--success)">38</div>
+        <div class="admin-stat-label">Completados</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num" style="color:var(--warning)">6</div>
+        <div class="admin-stat-label">En proceso</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num" style="color:var(--red)">3</div>
+        <div class="admin-stat-label">Pendientes</div>
+      </div>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchTab(this,'all')">Todos</button>
+      <button class="admin-tab" onclick="switchTab(this,'pending')">Pendientes</button>
+      <button class="admin-tab" onclick="switchTab(this,'active')">En Proceso</button>
+      <button class="admin-tab" onclick="switchTab(this,'done')">Completados</button>
+      <button class="admin-tab" onclick="switchTab(this,'clients')">Clientes</button>
+    </div>
+    <div class="admin-panel">
+      <div class="table-header">
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase">Gestión de Servicios</h3>
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="🔍 Buscar..." id="adminSearch" oninput="filterAdminTable()">
+          <button class="btn btn-primary" style="font-size:14px;padding:10px 20px" onclick="addNewService()">+ Agregar</button>
+        </div>
+      </div>
+      <div class="table-wrap" style="margin-top:20px;overflow-x:auto">
+        <table id="adminTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Cliente</th><th>Teléfono</th><th>Vehículo</th><th>Problema</th><th>Estado</th><th>Conductor</th><th>Fecha</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+          <div class="logo-icon">🚛</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900"><span style="color:var(--yellow)">MANDITO</span> TOWING</div>
+        </div>
+        <p>Servicio profesional de grúa y asistencia vehicular en toda la isla de Puerto Rico. Disponibles 24/7, los 365 días del año.</p>
+        <div style="margin-top:20px;font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:var(--yellow)">📞 787-218-2648</div>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a href="tel:7872182648" class="btn btn-red" style="font-size:14px;padding:10px 18px">Llamar</a>
+          <a href="https://wa.me/17872182648" class="btn btn-green" style="font-size:14px;padding:10px 18px">WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Servicios</div>
+        <div class="footer-links">
+          <a href="#servicios">Servicio de Grúa</a>
+          <a href="#servicios">Remolque de Vehículos</a>
+          <a href="#servicios">Asistencia en Carretera</a>
+          <a href="#servicios">Encendido de Batería</a>
+          <a href="#servicios">Cambio de Goma</a>
+          <a href="#servicios">Apertura de Vehículos</a>
+          <a href="#servicios">Transporte de Autos</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Navegación</div>
+        <div class="footer-links">
+          <a href="#inicio">Inicio</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#solicitar">Solicitar Grúa</a>
+          <a href="#buscar">Buscar Vehículo</a>
+          <a href="#rastrear">Rastrear Servicio</a>
+          <a href="#mapa">Cobertura</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-title">Cobertura</div>
+        <div class="footer-links">
+          <a href="#">San Juan</a>
+          <a href="#">Bayamón</a>
+          <a href="#">Carolina</a>
+          <a href="#">Ponce</a>
+          <a href="#">Mayagüez</a>
+          <a href="#">Arecibo</a>
+          <a href="#">Humacao</a>
+          <a href="#">+ 71 municipios</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 MANDITO TOWING. Todos los derechos reservados. Puerto Rico.</div>
+      <div class="footer-avail">
+        <span style="width:8px;height:8px;background:var(--success);border-radius:50%;display:inline-block;animation:pulse 2s infinite"></span>
+        Disponible 24/7 · Toda la isla
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-link">📘</a>
+        <a href="#" class="social-link">📷</a>
+        <a href="https://wa.me/17872182648" class="social-link">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns">
+  <a href="https://wa.me/17872182648" class="float-btn float-wa" title="WhatsApp" style="position:relative">
+    <span class="float-label">WhatsApp</span>
+    💬
+  </a>
+  <a href="tel:7872182648" class="float-btn float-call" title="Llamar" style="position:relative">
+    <span class="float-label">Llamar ahora</span>
+    📞
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
